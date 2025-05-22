@@ -14,9 +14,9 @@ static void bubble_sort(int *array, int len)
     int i, j;
  
     for (i = 0; i < len - 1; i++)
-        for (j = 0; j < len - 1; j++)  
-            if (array[j] > array[j + 1]) 
-                swap(&array[j], &array[j + 1]); 
+        for (j = 0; j < len - i - 1; j++)
+            if (array[j] > array[j + 1])
+                swap(&array[j], &array[j + 1]);
 }
  
 static void print_array(int *array, int len)
@@ -33,7 +33,7 @@ int main()
 {
     int array[MAX_LEN], len, i;
  
-    printf("What's the length of the array? Maximum lenght is %d\n", MAX_LEN);
+    printf("What's the length of the array? Maximum length is %d\n", MAX_LEN);
     scanf("%d", &len);
  
     printf("Gimme the %d elements\n", len);
